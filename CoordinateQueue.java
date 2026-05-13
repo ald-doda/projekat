@@ -10,7 +10,24 @@ public class CoordinateQueue {
 	}
 	private CoordinateNode glava;
 	private CoordinateNode rep;
-	
+
+	private static class Coordinate{
+		private int red;
+		private int kolona;
+		
+		
+		public Coordinate(int red, int kolona) {
+			this.red = red;
+			this.kolona = kolona;
+		}
+		public int getRed() {
+			return red;
+		}
+		
+		public int getKolona() {
+			return kolona;
+		}
+	}
 	public void enqueue(int red, int kolona) {
 		CoordinateNode novi = new CoordinateNode();
 		novi.red = red;
@@ -24,7 +41,7 @@ public class CoordinateQueue {
 		}
 		
 	}
-	public int[] dequeue() {
+	public Coordinate dequeue() {
 		if(glava == null) {
 			return null;
 		}
@@ -34,7 +51,7 @@ public class CoordinateQueue {
 		if(glava == null) {
 			rep = null;
 		}
-		return new int[] {temp.red, temp.kolona};
+		return new Coordinate(temp.red, temp.kolona);
 		
 		
 		
