@@ -41,7 +41,7 @@ public class CoordinateQueue {
 		}
 		
 	}
-	public Coordinate dequeue() {
+	public int[] dequeue() {
 		if(glava == null) {
 			return null;
 		}
@@ -51,10 +51,7 @@ public class CoordinateQueue {
 		if(glava == null) {
 			rep = null;
 		}
-		return new Coordinate(temp.red, temp.kolona);
-		
-		
-		
+		return new int[] {temp.red, temp.kolona};
 	}
 	
 	public boolean isEmpty() {
