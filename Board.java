@@ -65,7 +65,7 @@ public class Board {
 	        int[] dy = {-1,  0,  1, -1, 1, -1, 0, 1};
 	        
 	        while(!queue.isEmpty()) {
-	            int[] trenutni = queue.dequeue();
+	            Coordinate trenutni = queue.dequeue();
 	            int r = trenutni[0];
 	            int k = trenutni[1];
 	            
