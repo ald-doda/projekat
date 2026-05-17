@@ -3,7 +3,7 @@ package igrica;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class GamesSimulator {
+public class GameSimulator {
 
     public static Player createBot(Board tabla) {
         return new Player(tabla);
@@ -46,7 +46,7 @@ public class GamesSimulator {
                 String csvLinija = String.format("%d,%s,%s,%d,%d\n", 
                         idMeca, tipBota, ishodString, vrijemeMs, ukupnoKlikova);
                 
-                pisac.write(csvLinija);
+                pisac.write(csvLinija);                
             }
 
             System.out.println("Simulacija je uspjesno zavrsena! Kreiran je fajl: " + csvFajl);
@@ -54,5 +54,14 @@ public class GamesSimulator {
         } catch (IOException e) {
             System.err.println("Greska prilikom upisivanja u CSV fajl: " + e.getMessage());
         }
+    	
+        try {
+    		TestMatchesAnalysis.printTestAnalysis();
+    	}
+        catch (Exception e) {
+        	System.err.println("Greska prilikom izrade test analize: " + e.getMessage() + e.getStackTrace());
+        	e.printStackTrace();	
+        }
+    
     }
 }
