@@ -33,11 +33,12 @@ public class MatchDataset {
     }
     
     public MatchSummary getMatchWithHighestClickRate() {
-    	MatchSummary maxClicksMatch = matches
-    	        .stream()
-    	        .max(Comparator.comparingDouble(m -> (double)m.totalClicks() / m.timeMs() == 0 ? 1 : m.timeMs()))
-    	        .orElse(null);
-    	
-    	return maxClicksMatch;
-    }
+    MatchSummary maxClicksMatch = matches
+            .stream()
+            .max(Comparator.comparingDouble(m -> 
+                (double) m.totalClicks() / (m.timeMs() == 0 ? 1 : m.timeMs())))
+            .orElse(null);
+    
+    return maxClicksMatch;
+}
 }
