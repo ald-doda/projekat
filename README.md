@@ -96,8 +96,8 @@ Manji broj mina → više pobjeda u datasetu.
  
 | Ime i prezime | Broj indeksa |
 |---|---|
-| Aleksandra Asanin | 17/25 |
-| Lana Sundić | 8/24 |
+| Aleksandra Ašanin | 17/25 |
+| Lana Šundić | 8/24 |
 | Aldin Feratović | 4/25 |
  
 
