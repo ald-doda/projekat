@@ -91,7 +91,7 @@ Manji broj mina → više pobjeda u datasetu.
  
 **Predmet:** Strukture podataka  
 **Smjer:** Računarstvo i informacione tehnologije  
-**Profesor:** prof. Milenko Mošurović  
+**Profesor:** prof. Milenko Mosurović  
 **Saradnica:** Sara Stijepović
  
 | Ime i prezime | Broj indeksa |
